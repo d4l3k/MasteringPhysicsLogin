@@ -3,10 +3,10 @@ var storage = {};
 
 function loginform(){
     if(storage.user && storage.pass){
-        if($("#loginForm").length>0){
+        if($("#loginForm").length>0&&$("p.error").length==0){
             $("#loginForm #nme").val(storage.user);
             $("#loginForm #pwd").val(storage.pass);
-            $("#loginForm .submit").click();
+            $("#loginForm [type=submit]").click();
         }
     }
 }
